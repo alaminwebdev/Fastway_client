@@ -1,6 +1,6 @@
 <?php
-include 'lib/User.php';
 include 'base.php';
+include 'lib/User.php';
 ?>
 
 <!-- Register Start -->

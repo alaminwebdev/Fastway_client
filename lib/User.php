@@ -14,6 +14,8 @@ if (!isset($_SESSION)) {
 
 <?php
 ob_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 class User
 {
@@ -90,7 +92,10 @@ class User
 
 			// Page on which the user is sent
 			// to after logging in
-			header('Location:index.php');
+			// header('Location:index.php');
+			// Redirect to index.php using JavaScript
+			echo '<script>window.location.href = "index.php";</script>';
+			exit; 
 		} else {
 			$msg = "<div class='alert alert-danger'> Error! Username And password not matched </div>";
 			return $msg;
